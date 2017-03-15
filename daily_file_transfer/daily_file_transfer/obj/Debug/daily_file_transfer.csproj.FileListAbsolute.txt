@@ -1,0 +1,6 @@
+C:\Users\Student\Source\Workspaces\mvs\daily_file_transfer\daily_file_transfer\bin\Debug\daily_file_transfer.exe.config
+C:\Users\Student\Source\Workspaces\mvs\daily_file_transfer\daily_file_transfer\bin\Debug\daily_file_transfer.exe
+C:\Users\Student\Source\Workspaces\mvs\daily_file_transfer\daily_file_transfer\bin\Debug\daily_file_transfer.pdb
+C:\Users\Student\Source\Workspaces\mvs\daily_file_transfer\daily_file_transfer\obj\Debug\daily_file_transfer.csprojResolveAssemblyReference.cache
+C:\Users\Student\Source\Workspaces\mvs\daily_file_transfer\daily_file_transfer\obj\Debug\daily_file_transfer.exe
+C:\Users\Student\Source\Workspaces\mvs\daily_file_transfer\daily_file_transfer\obj\Debug\daily_file_transfer.pdb
