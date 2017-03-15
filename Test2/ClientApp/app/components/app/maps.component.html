@@ -1,0 +1,29 @@
+﻿<!-- Could make this a table later -->
+
+<div>
+    <h4>{{search}}</h4>
+    <input type="text" class="input-group input-group-sm" [(ngModel)]="searchTerm" [ngModelOptions]="{standalone: true}" placeholder="Search" />
+    <button class="btn btn-default" (click)="searchWord(searchTerm)"></button>
+    <div *ngIf="searchCompleted">
+        <table class="table table-bordered table-striped">
+            <thead class="thead-inverse">
+                <tr>
+                    <th>#</th>
+                    <th>Location Name</th>
+                    <th>Address</th>
+                    <th>Latitude</th>
+                    <th>Longitude</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>{{cityname}}</td>
+                    <td>{{fullname}}</td>
+                    <td>{{latitude}}</td>
+                    <td>{{longitude}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

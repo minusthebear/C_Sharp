@@ -1,0 +1,38 @@
+﻿<div class="row">
+    <div class="col-sm-12 col-lg-pull-6">
+        <h4>{{search}}</h4>
+    </div>
+</div>
+<div *ngIf="showButtons" class="row">
+    <div class="col-sm-12 col-lg-6">
+        <h4>{{message}}</h4>
+        <div class="btn-group">
+            <button type="button" class="btn btn-success" (click)="confirm(true)">Yes</button>
+            <button type="button" class="btn btn-danger" (click)="confirm(false)">No</button>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12 col-lg-6">
+        <input type="text" class="input-group input-group-sm" [(ngModel)]="searchTerm" [ngModelOptions]="{standalone: true}" placeholder="Search" />
+        <button class="btn btn-default" (click)="searchCity(searchTerm)"></button>
+        <div *ngIf="searchCompleted">
+            <ul>
+                <li (click)="retrieveCity(weatherLoc)" *ngFor="let weatherLoc of weatherLocs">{{weatherLoc.city}}, {{weatherLoc.state}}, {{weatherLoc.country}}</li>
+            </ul> 
+        </div>
+        <div *ngIf="searchSatisfied">
+            <div *ngFor="let w of c_w | keys">
+                {{w.key}} - {{w.value}}
+            </div>
+            <!--
+            <ul>
+                <li *ngFor="let (k, v) in c_w"></li>
+            </ul>
+                -->
+        </div>
+        <div *ngIf="warningMessage">
+            <p>Whoops! I guess it couldn't find the city and state/country you were looking for!</p>
+        </div>
+    </div>
+</div>

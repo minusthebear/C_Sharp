@@ -1,0 +1,22 @@
+﻿<div class="row">
+    <div class="col-sm-12 col-lg-6">
+        <div *ngIf="showButtons">
+            <h4>{{message}}</h4>
+            <div class="btn-group">
+                <button type="button" class="btn btn-success" (click)="confirm(true)">Yes</button>
+                <button type="button" class="btn btn-danger" (click)="confirm(false)">No</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-6 col-sm-12">
+        <input type="text" class="input-group input-group-sm" #wiki (enter)="getWikiInfo(wiki.value)" (keyup)="wikiSearch(wiki.value)" />
+        <ul style="list-style: none;" class="">
+            <li style="cursor:pointer;" (click)="getWikiInfo(result)" *ngFor="let result of results | async">{{result}}</li>
+        </ul>
+        <p></p>
+        <div [innerHTML]="theHtml"></div>
+        {{info}}
+    </div>
+</div>
